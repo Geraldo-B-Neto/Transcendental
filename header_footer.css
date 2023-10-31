@@ -1,0 +1,81 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    }
+header > nav{
+margin-left: 10px;
+align-items: center;
+}
+header nav > a{
+color: white;
+text-decoration: none;
+}
+header > section{
+margin-right: 10px;
+}
+header section > a{
+color: white;
+text-decoration: none;
+}
+#container_caminhos_menu{
+position: relative;
+}
+#caminhos_menu{
+display: none;
+position: absolute;
+background-color:black;
+width: 150px;
+z-index: 999;
+}
+#caminhos_menu > a{
+display: flex;
+font-size: var(--fonte_tri);
+flex-direction: column;
+text-decoration: none;
+color: var(--cor_texto);
+border-bottom: 1px #FFD700 solid;
+margin: 5px;
+text-align: center;
+}
+#caminhos_menu > a:last-child{
+border: none;
+}
+
+/* -------------------- */
+
+footer{
+  background: black;
+  padding: 1rem 0;
+}
+#container_footer_conteudo{
+  display: flex;
+  justify-content: space-evenly;
+}
+#container_footer_conteudo >section{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-around;
+}
+#container_footer_conteudo section >h4{
+  margin-bottom: .5rem;
+}
+#container_footer_conteudo section >article{
+  text-align: center;
+}
+#container_footer_conteudo section article>a{
+  color: white;
+  text-decoration: none;
+}
+#container_footer_conteudo >section:nth-child(2){
+  display: none;
+}
+.imgs_redes{
+  width: 2.5rem;
+}

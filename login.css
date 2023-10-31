@@ -1,0 +1,226 @@
+@charset "UTF-8 ";
+
+:root{
+  --cor_fundo:#191924;
+  --cor_fundo_sec:#10041c;
+  --cor_destaque:#00ff88;
+  --cor_secundaria:#FFD700;
+  --cor_texto:white;
+
+  /* fontes */
+
+  --fonte_principal:2rem; /*titulos */
+  --fonte_principal_2:1.5rem; /*subtitulos */
+  --fonte_sec:1.04rem; /*textos conteudo destacado */
+  --fonte_tri:1rem; /*textos conteudo secundario */
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-color: var(--cor_fundo);
+}
+#form_container{
+  width: 90vw;
+  background-color: var(--cor_fundo_sec);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding-top: 10px;
+  padding-bottom: 28px;
+  border-radius: 5px;
+}
+#form_conteudo_box{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+  border:1px var(--cor_destaque) solid;
+  padding: 25px 20px 10px 20px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#form_conteudo_box legend{
+  text-align: center;
+  color: var(--cor_texto);
+  border: 1px var(--cor_destaque) solid;
+  padding: 6px;
+  font-size: var(--fonte_tri);
+  font-weight: 300;
+  
+}
+.inputs_flex{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.inputs_flex input{
+    background: none;
+    border: none;
+    border-bottom: 1px white solid;
+    outline: none;
+    transition: all .3s ease-in-out;
+    width: 100%;
+    letter-spacing: 2px;
+    color: var(--cor_texto);
+}
+#user_id{
+  margin-bottom: 1.5rem;
+}
+#user_senha{
+  margin-bottom: 1rem;
+}
+.inputs_flex input:focus{
+  border-bottom: 1px var(--cor_destaque) solid
+  ;
+}
+.inputs_flex label{
+  color: var(--cor_texto);
+  transition: all .5s ease-in-out; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--fonte_tri);
+  font-weight: 300;
+}
+.inputs_flex input:focus + label{
+  color: green;
+  top: -15px;
+  font-size: 12px;
+}
+.inputs_flex input:valid + label{
+  color: green;
+  top: -15px;
+  font-size: 12px;
+}
+.inputs_flex input:required:invalid + label:before{ 
+  content: '*'; 
+} 
+#container_conta{
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+#container_conta a{
+  text-decoration: none;
+  color:var(--cor_texto);
+  font-size: .8rem;
+  font-weight: 250;
+}
+#container_submit{
+  text-align: center;
+  margin-bottom: 7.7rem;
+}
+
+#container_submit p{
+  color: var(--cor_texto);
+  text-align: center;
+  font-size: var(--fonte_tri);
+  font-weight: 400;
+  margin-top: 11px;
+}
+#user_submit{
+  background-color: var(--cor_fundo_sec);
+  border: 1px var(--cor_destaque) solid;
+  color: var(--cor_texto);
+  border-radius: 5.5%;
+  padding: 6px;
+  font-size: var(--fonte_tri);
+  font-weight: 300;
+  width: 70%;
+}
+#container_redes{
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  border-top: 1px white solid;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  font-size: var(--fonte_tri);
+  color: var(--cor_texto);
+  font-weight: 300;
+}
+#container_redes p{
+  font-size: var(--fonte_tri);
+  font-weight: 300;
+  margin: 10px 0px 0px 0px;
+}
+#container_redes a{
+  text-decoration: none;
+  color:var(--cor_texto);
+  font-size: .8rem;
+  font-weight: 250;
+  margin-bottom: 15px;
+}
+#container_redes_img{
+  display: flex;
+  justify-content: space-around;
+}
+#google{
+  width: 3rem;
+}
+#face{
+  margin-top: 3px;
+  width:3rem;
+  height:2.5rem;
+}
+#insta{
+  width: 3rem;
+}
+@media screen and (min-width:769px) and (max-width:922px){
+  #form_container{
+    width: 60vw;
+    background-color: var(--cor_fundo_sec);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+  #form_conteudo_box{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    border:1px var(--cor_destaque) solid;
+    padding: 25px 20px 10px 20px;
+    position: relative;
+  }
+}
+@media screen and (min-width:923px){
+  #form_container{
+    width: 80vw;
+    background-color: var(--cor_fundo_sec);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+  #form_conteudo_box{
+    width: 95%;
+  }
+  #user_submit{
+    background-color: var(--cor_fundo_sec);
+    border: 1px var(--cor_destaque) solid;
+    color: var(--cor_texto);
+    border-radius: 5.5%;
+    padding: 6px;
+    width: 40%;
+  }
+}
